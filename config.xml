@@ -11,10 +11,8 @@
 	</author>
 	<platform name="android" />
     
-    <splash src="cool" platform="android" qualifier="ldpi" />
-    <splash src="cool" platform="android" qualifier="mdpi" />
-    <splash src="cool" platform="android" qualifier="hdpi" />
-    <splash src="cool" platform="android" qualifier="xhdpi" />
+    <icon src="icon.png" />
+    <splash src="splash.png" />
      
 	
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
