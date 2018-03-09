@@ -12,9 +12,7 @@
 	<platform name="android" />
     
     <icon src="cool.png" />
-    <icon src="cool.png" gap:platform="android" gap:qualifier="ldpi" />
-    <gap:splash src="business.png" />
-              
+  
      
 	
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
