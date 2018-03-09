@@ -14,17 +14,17 @@ h1 {
 .info{
 	margin: auto;
 	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Georgia, serif;
 }
 
 #connectionButton#connectionButton{
 	background-color: #377eda;
 }
 #deviceInfoButton{
-	background-color: #9529dd;
+	background-color: rgb(88, 87, 97);
 }
 #personalInfoButton{
-	background-color: #6bda37;
+	background-color:#a4c639;
 }
 
 .typicalButton{
