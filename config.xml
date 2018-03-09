@@ -11,9 +11,9 @@
 	</author>
 	<platform name="android" />
     
-    <icon src="www/img/cool.png">
+    <icon src="www/img/cool.png" />
     <icon src="www/img/cool.png" gap:platform="android" gap:qualifier="ldpi" />
-    <gap:splash src="www/img/business.png">
+    <gap:splash src="www/img/business.png" />
               
      
 	
