@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-		id          = "myfirstapp"
+		id          = "business_card"
         version     = "1.0.0" >
 
     <name>Business Card</name>
@@ -11,9 +11,9 @@
 	</author>
 	<platform name="android" />
     
-    <icon src="www/img/cool.png" />
-    <icon src="www/img/cool.png" gap:platform="android" gap:qualifier="ldpi" />
-    <gap:splash src="www/img/business.png" />
+    <icon src="cool.png" />
+    <icon src="cool.png" gap:platform="android" gap:qualifier="ldpi" />
+    <gap:splash src="business.png" />
               
      
 	
