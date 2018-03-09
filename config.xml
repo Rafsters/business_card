@@ -9,16 +9,13 @@
     <author href="http://mypersonalwebsite.com" email="johnbrown@gmail.com">
 		Rafał Kwiecień
 	</author>
-	<platform name="android">
-              <icon src="www/img/cool.png" density="ldpi" />
-              <icon src="www/img/cool.png" density="mdpi" />
-              <icon src="www/img/cool.png" density="hdpi" />
-              <icon src="www/img/cool.png" density="xhdpi" />
-              <splash src="www/img/business.png" density="land-hdpi"/>
-              <splash src="www/img/business.png" density="land-ldpi"/>
-              <splash src="www/img/business.png" density="land-mdpi"/>
-              <splash src="www/img/business.png" density="land-xhdpi"/>
-     </platform>
+	<platform name="android" />
+    
+    <icon src="www/img/cool.png">
+    <icon src="www/img/cool.png" gap:platform="android" gap:qualifier="ldpi" />
+    <gap:splash src="www/img/business.png">
+              
+     
 	
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
