@@ -22,6 +22,22 @@ function deviceInfo() {
 }
 
 function personalInfo(){
-	personalStuff = 'Rafał Kwiecień 187161 UEK Informatyka Stosowana';
+	personalStuff = 'This card belongs to me, Rafał';
 	navigator.notification.alert(personalStuff);
+}
+
+function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    alert('Connection type: ' + states[networkState]);
 }

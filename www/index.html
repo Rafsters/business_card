@@ -8,15 +8,21 @@
 
 	</head>
 	<body onload="init()">
-		<h1>Personal Info</h1>
-		<p>Rafał Kwiecień <br><br>
-		kwiecienraf@gmailc.com<br><br>
-		https://github.com/Rafsters<br><br>
-		KrDUIs1012<br><br>
-		Informatyka Stosowana Studia Magisterskie I rok<br><br>
-		<img src="img\android.jpg">
-		</p>
-		
+		<div class="content">
+			<div class="info">
+				<h1>Personal Info</h1>
+				<p class="tst">Name: Rafał Kwiecień <br><br>
+				Mail: kwiecienraf@gmail.com<br><br>
+				Website: https://github.com/Rafsters<br><br>
+				Dean's Group Number: KrDUIs1012<br><br>
+				Field of study: Informatyka Stosowana Studia Magisterskie I rok<br><br>
+				<img src="img\android.jpg">
+				</p>
+			</div>
+			<button id="connectionButton" class="typicalButton" onclick="checkConnection()">Check Internet connection</button><br>
+			<button id="deviceInfoButton" class="typicalButton" onclick="deviceInfo()">Device Info</button><br>
+			<button id="personalInfoButton" class="typicalButton" onclick="personalInfo()">Author</button><br>
+		</div>
 		
 	</body>
 </html>

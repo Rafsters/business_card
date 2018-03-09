@@ -1,4 +1,48 @@
 h1 {
 	text-align: center;
-	color: blue;
+	color: #377eda;
+	font-weight: bold;
+	font-size: 4em;
+}
+
+.content{
+	margin: auto;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.info{
+	margin: auto;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#connectionButton#connectionButton{
+	background-color: #377eda;
+}
+#deviceInfoButton{
+	background-color: #9529dd;
+}
+#personalInfoButton{
+	background-color: #6bda37;
+}
+
+.typicalButton{
+	margin-top: 5px;
+	margin-bottom: 5px; 
+	width: 10%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font-size: 16px;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+	1px 1px 0 #000;  
+	border-style: solid;
+	border-color: #000;
 }
