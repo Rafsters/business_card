@@ -30,7 +30,6 @@ h1 {
 .typicalButton{
 	margin-top: 5px;
 	margin-bottom: 5px; 
-	width: 10%;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -38,11 +37,9 @@ h1 {
     text-decoration: none;
     display: inline-block;
 	font-size: 16px;
-	text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-	1px 1px 0 #000;  
-	border-style: solid;
-	border-color: #000;
+	
+}
+img{
+	width: 100%;
+    height: auto;
 }
