@@ -13,10 +13,12 @@
     
     <icon src="icon.png" />
     <splash src="splash.png" />
-    <preference name="SplashScreen" value="screen" />	
+    <preference name="SplashScreen" value="screen" />
+
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
     <plugin name="cordova-plugin-network-information" spec="2.0.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
     
 
 </widget>
