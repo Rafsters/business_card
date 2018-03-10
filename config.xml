@@ -13,7 +13,18 @@
     
     <icon src="icon.png" />
     <splash src="splash.png" />
-    <preference name="SplashScreen" value="splash" />
+    <platform name="android">
+    <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/splash.png" density="land-hdpi"/>
+        <splash src="res/screen/splash.png" density="land-ldpi"/>
+        <splash src="res/screen/splash.png" density="land-mdpi"/>
+        <splash src="res/screen/splash.png" density="land-xhdpi"/>
+
+        <splash src="res/screen/splash.png" density="port-hdpi"/>
+        <splash src="res/screen/splash.png" density="port-ldpi"/>
+        <splash src="res/screen/splash.png" density="port-mdpi"/>
+        <splash src="res/screen/splash.png" density="port-xhdpi"/>
+</platform>
 
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
