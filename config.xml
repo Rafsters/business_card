@@ -25,7 +25,8 @@
         <splash src="res/screen/splash.png" density="port-mdpi"/>
         <splash src="res/screen/splash.png" density="port-xhdpi"/>
 </platform>
-
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="3000" />
 	<plugin name="cordova-plugin-device" spec="2.0.1" />
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
     <plugin name="cordova-plugin-network-information" spec="2.0.1" />
