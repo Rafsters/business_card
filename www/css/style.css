@@ -40,6 +40,10 @@ body{
 	background-color:#a4c639;
 }
 
+#checkPostionButton{
+	background-color:#377eda;
+}
+
 .typicalButton{
 	margin-top: 5px;
 	margin-bottom: 5px; 
