@@ -57,23 +57,28 @@ function checkPosition(){
 }
 
 
-function displayContacts(){
-	function onSuccess(contacts) {
-		alert('Found ' + contacts.length + ' contacts.');
+function listContacts(){
+	function onSuccess(contact) {
+		alert("Save Success");
 	};
 	 
 	function onError(contactError) {
-		alert('onError!');
+		alert("Error = " + contactError.code);
 	};
 	 
-	// find all contacts with 'Piotrek' in any name field
-	var options      = new ContactFindOptions();
-	options.filter   = "Piotrek";
-	options.multiple = true;
-	options.desiredFields = [navigator.contacts.fieldType.id];
-	options.hasPhoneNumber = true;
-	var fields       = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
-	navigator.contacts.find(fields, onSuccess, onError, options);
+	// create a new contact object
+	var contact = navigator.contacts.create();
+	contact.displayName = "Plumber";
+	contact.nickname = "Plumber";            // specify both to support all devices
+	 
+	// populate some fields
+	var name = new ContactName();
+	name.givenName = "Jane";
+	name.familyName = "Doe";
+	contact.name = name;
+	 
+	// save to device
+	contact.save(onSuccess,onError);
 }
 
 
