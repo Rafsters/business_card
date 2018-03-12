@@ -79,6 +79,6 @@ function displayContacts(){
 	options.filter = "";
 	options.multiple = true;
 	filter = ["*"];
-	navigator.contacts.find(filter, onSuccessContacts, onErrorContacts, options);
+	navigator.contacts.find(filter, onSuccess, onError, options);
 }
 
