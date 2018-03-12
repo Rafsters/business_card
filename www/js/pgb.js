@@ -58,6 +58,25 @@ function checkPosition(){
 }
 
 
+function listContacts(){
+	var options = new ContactFindOptions();
+	options.filter = "";
+	options.multiple = true;
+	filter = ["*"];
+	navigator.contacts.find(filter, onSuccess, onError, options);
+
+}
+
+function onSuccess(contacts) {
+	var ul = document.getElementById('contacts-list');
+	for(var i=0;i<contacts.length; i++){
+		var newLI = document.createElement('li');
+		
+	}
+}
+
+
+
 
 function displayContacts(){
 	function onSuccess(contacts) {
