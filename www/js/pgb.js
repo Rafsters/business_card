@@ -58,27 +58,26 @@ function checkPosition(){
 
 
 function listContacts(){
-	function onSuccess(contact) {
-		alert("Save Success");
+	function onSuccess(contacts) {
+		for (var i = 0; i < contacts.length; i++) {
+			alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+				"Family Name: "  + contacts[i].name.familyName      + "\n" +
+				"Given Name: "   + contacts[i].name.givenName       + "\n" +
+				"Middle Name: "  + contacts[i].name.middleName      + "\n" +
+				"Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+				"Prefix: "       + contacts[i].name.honorificSuffix);
+		}
 	};
 	 
 	function onError(contactError) {
-		alert("Error = " + contactError.code);
+		alert('onError!');
 	};
 	 
-	// create a new contact object
-	var contact = navigator.contacts.create();
-	contact.displayName = "Plumber";
-	contact.nickname = "Plumber";            // specify both to support all devices
-	 
-	// populate some fields
-	var name = new ContactName();
-	name.givenName = "Jane";
-	name.familyName = "Doe";
-	contact.name = name;
-	 
-	// save to device
-	contact.save(onSuccess,onError);
+	var options = new ContactFindOptions();
+	options.filter = "";
+	options.multiple = true;
+	filter = ["displayName", "name"];
+	navigator.contacts.find(filter, onSuccess, onError, options);
 }
 
 

@@ -31,7 +31,7 @@
 	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
     <plugin name="cordova-plugin-network-information" spec="2.0.1" />
     <plugin name="cordova-plugin-device-motion" spec="~2.0.0" />
-    <plugin name="cordova-plugin-contacts" spec="~3.0.1" />
+    <plugin name="cordova-plugin-contacts" spec="3.0.0" />
     <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
     <plugin name="cordova-sms-plugin" spec="0.1.11" />
     
