@@ -43,6 +43,9 @@ body{
 #checkPostionButton{
 	background-color:#377eda;
 }
+#displayContactsButton{
+	background-color:rgb(88, 87, 97);
+}
 
 .typicalButton{
 	margin-top: 5px;

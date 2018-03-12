@@ -42,57 +42,25 @@ function checkConnection() {
     alert('Connection type: ' + states[networkState]);
 }
 
-function onSuccess(acceleration) {
-    alert('Acceleration X: ' + acceleration.x + '\n' +
-          'Acceleration Y: ' + acceleration.y + '\n' +
-          'Acceleration Z: ' + acceleration.z + '\n' +
-          'Timestamp: '      + acceleration.timestamp + '\n');
-}
-
-function onError() {
-    alert('onError!');
-}
-
 function checkPosition(){
+	function onSuccess(acceleration) {
+		alert('Acceleration X: ' + acceleration.x + '\n' +
+			  'Acceleration Y: ' + acceleration.y + '\n' +
+			  'Acceleration Z: ' + acceleration.z + '\n' +
+			  'Timestamp: '      + acceleration.timestamp + '\n');
+	};
+	
+	function onError() {
+		alert('onError!');
+	};
 	navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 }
 
 
-function listContacts(){
-	function onSuccess(contacts) {
-		var ul = document.getElementById('contacts-list');
-		for(var i=0;i<contacts.length; i++){
-			var newLI = document.createElement('li');
-			newLI.innerHTML = contacts[i].name.formatted;
-			ul.appendChild(newLI);
-		}
-	};
-	
-	function onError(contactError) {
-		alert('onError!');
-	};
-	var options = new ContactFindOptions();
-	options.filter = "";
-	options.multiple = true;
-	filter = ["*"];
-	navigator.contacts.find(filter, onSuccess, onError, options);
-
-}
-
-
-
-
-
-/*
 function displayContacts(){
 	function onSuccess(contacts) {
 		for (var i = 0; i < contacts.length; i++) {
-			alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
-				"Family Name: "  + contacts[i].name.familyName      + "\n" +
-				"Given Name: "   + contacts[i].name.givenName       + "\n" +
-				"Middle Name: "  + contacts[i].name.middleName      + "\n" +
-				"Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
-				"Prefix: "       + contacts[i].name.honorificSuffix);
+			alert("Formatted: "  + contacts[i].name.formatted       + "\n");
 		}
 	};
 	
@@ -106,4 +74,4 @@ function displayContacts(){
 	filter = ["*"];
 	navigator.contacts.find(filter, onSuccess, onError, options);
 }
-*/
+
