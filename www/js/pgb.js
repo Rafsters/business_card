@@ -57,7 +57,7 @@ function checkPosition(){
 	navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 }
 
-function onSuccess(contacts) {
+function onSuccessContacts(contacts) {
     for (var i = 0; i < contacts.length; i++) {
         alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
             "Family Name: "  + contacts[i].name.familyName      + "\n" +
@@ -68,7 +68,7 @@ function onSuccess(contacts) {
     }
 };
 
-function onError(contactError) {
+function onErrorContacts(contactError) {
     alert('onError!');
 };
 
@@ -77,6 +77,6 @@ function displayContacts(){
 	options.filter = "";
 	options.multiple = true;
 	filter = ["displayName", "name"];
-	navigator.contacts.find(filter, onSuccess, onError, options);
+	navigator.contacts.find(filter, onSuccessContacts, onErrorContacts, options);
 }
 
