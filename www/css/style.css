@@ -46,6 +46,9 @@ body{
 #displayContactsButton{
 	background-color:rgb(88, 87, 97);
 }
+#smsButton{
+	background-color: #a4c639;
+}
 
 .typicalButton{
 	margin-top: 5px;
