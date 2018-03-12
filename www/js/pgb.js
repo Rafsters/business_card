@@ -57,26 +57,28 @@ function checkPosition(){
 	navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 }
 
-function onSuccessContacts(contacts) {
-    for (var i = 0; i < contacts.length; i++) {
-        alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
-            "Family Name: "  + contacts[i].name.familyName      + "\n" +
-            "Given Name: "   + contacts[i].name.givenName       + "\n" +
-            "Middle Name: "  + contacts[i].name.middleName      + "\n" +
-            "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
-            "Prefix: "       + contacts[i].name.honorificSuffix);
-    }
-}
 
-function onErrorContacts(contactError) {
-    alert('onError!');
-}
 
 function displayContacts(){
+	function onSuccess(contacts) {
+		for (var i = 0; i < contacts.length; i++) {
+			alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+				"Family Name: "  + contacts[i].name.familyName      + "\n" +
+				"Given Name: "   + contacts[i].name.givenName       + "\n" +
+				"Middle Name: "  + contacts[i].name.middleName      + "\n" +
+				"Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+				"Prefix: "       + contacts[i].name.honorificSuffix);
+		}
+	};
+	
+	function onError(contactError) {
+		alert('onError!');
+	};
+
 	var options = new ContactFindOptions();
 	options.filter = "";
 	options.multiple = true;
-	filter = ["displayName", "name"];
+	filter = ["*"];
 	navigator.contacts.find(filter, onSuccessContacts, onErrorContacts, options);
 }
 
