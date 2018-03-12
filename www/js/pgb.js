@@ -60,21 +60,19 @@ function checkPosition(){
 function displayContacts(){
 	function onSuccess(contacts) {
 		alert('Found ' + contacts.length + ' contacts.');
-		/*
-		for (var i = 0; i < contacts.length; i++) {
-			alert("Formatted: "  + contacts[i].name.formatted       + "\n");
-		}
-		*/
 	};
-	
+	 
 	function onError(contactError) {
 		alert('onError!');
 	};
-
-	var options = new ContactFindOptions();
-	options.filter = "";
+	 
+	// find all contacts with 'Piotrek' in any name field
+	var options      = new ContactFindOptions();
+	options.filter   = "Piotrek";
 	options.multiple = true;
-	filter = ["*"];
-	navigator.contacts.find(filter, onSuccess, onError, options);
+	options.desiredFields = [navigator.contacts.fieldType.id];
+	options.hasPhoneNumber = true;
+	var fields       = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
+	navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
