@@ -56,3 +56,27 @@ function onError() {
 function checkPosition(){
 	navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 }
+
+function onSuccess(contacts) {
+    for (var i = 0; i < contacts.length; i++) {
+        alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+            "Family Name: "  + contacts[i].name.familyName      + "\n" +
+            "Given Name: "   + contacts[i].name.givenName       + "\n" +
+            "Middle Name: "  + contacts[i].name.middleName      + "\n" +
+            "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+            "Prefix: "       + contacts[i].name.honorificSuffix);
+    }
+};
+
+function onError(contactError) {
+    alert('onError!');
+};
+
+function displayContacts(){
+	var options = new ContactFindOptions();
+	options.filter = "";
+	options.multiple = true;
+	filter = ["displayName", "name"];
+	navigator.contacts.find(filter, onSuccess, onError, options);
+}
+
