@@ -59,9 +59,12 @@ function checkPosition(){
 
 function displayContacts(){
 	function onSuccess(contacts) {
+		alert('Found ' + contacts.length + ' contacts.');
+		/*
 		for (var i = 0; i < contacts.length; i++) {
 			alert("Formatted: "  + contacts[i].name.formatted       + "\n");
 		}
+		*/
 	};
 	
 	function onError(contactError) {
