@@ -58,6 +58,11 @@ function checkPosition(){
 
 
 function listContacts(){
+	var options = new ContactFindOptions();
+	options.filter = "";
+	options.multiple = true;
+	filter = ["displayName", "name"];
+	navigator.contacts.find(filter, onSuccess, onError, options);
 	function onSuccess(contacts) {
 		for (var i = 0; i < contacts.length; i++) {
 			alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
@@ -72,12 +77,6 @@ function listContacts(){
 	function onError(contactError) {
 		alert('onError!');
 	};
-	 
-	var options = new ContactFindOptions();
-	options.filter = "";
-	options.multiple = true;
-	filter = ["displayName", "name"];
-	navigator.contacts.find(filter, onSuccess, onError, options);
 }
 
 
