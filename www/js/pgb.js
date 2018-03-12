@@ -59,6 +59,18 @@ function checkPosition(){
 
 
 function listContacts(){
+	function onSuccess(contacts) {
+		var ul = document.getElementById('contacts-list');
+		for(var i=0;i<contacts.length; i++){
+			var newLI = document.createElement('li');
+			newLI.innerHTML = contacts[i].name.formatted;
+			ul.appendChild(newLI);
+		}
+	};
+	
+	function onError(contactError) {
+		alert('onError!');
+	};
 	var options = new ContactFindOptions();
 	options.filter = "";
 	options.multiple = true;
@@ -67,17 +79,11 @@ function listContacts(){
 
 }
 
-function onSuccess(contacts) {
-	var ul = document.getElementById('contacts-list');
-	for(var i=0;i<contacts.length; i++){
-		var newLI = document.createElement('li');
-		
-	}
-}
 
 
 
 
+/*
 function displayContacts(){
 	function onSuccess(contacts) {
 		for (var i = 0; i < contacts.length; i++) {
@@ -100,4 +106,4 @@ function displayContacts(){
 	filter = ["*"];
 	navigator.contacts.find(filter, onSuccess, onError, options);
 }
-
+*/
