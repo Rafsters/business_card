@@ -66,11 +66,11 @@ function onSuccessContacts(contacts) {
             "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
             "Prefix: "       + contacts[i].name.honorificSuffix);
     }
-};
+}
 
 function onErrorContacts(contactError) {
     alert('onError!');
-};
+}
 
 function displayContacts(){
 	var options = new ContactFindOptions();
