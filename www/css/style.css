@@ -30,6 +30,18 @@ body{
 	font-weight: bold;
 }
 
+.sms{
+	margin: auto;
+	text-align: center;
+	font-family: Georgia, serif;
+	color: #377eda;
+}
+
+.textPlace{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
 #connectionButton{
 	background-color: #377eda;
 }
